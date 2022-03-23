@@ -115,7 +115,7 @@ class spotifyWebApi {
 }
 
 const spotifyApi = new spotifyWebApi({
-  clientId: import.meta.env.SPOTIFY_CLIENT_ID,
+  clientId: import.meta.env.VITE_SPOTIFY_CLIENT_ID,
   clientSecret: import.meta.env.SPOTIFY_CLIENT_SECRET,
 });
 

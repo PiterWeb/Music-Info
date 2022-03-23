@@ -4,7 +4,7 @@ const redirectUri = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
 const endpoint = "api/token";
 const spotifyAccountURL = "https://accounts.spotify.com/";
 const client_secret = import.meta.env.SPOTIFY_CLIENT_SECRET;
-const client_id = import.meta.env.SPOTIFY_CLIENT_ID;
+const client_id = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
 
 const getAccessToken = (code) =>
   new Promise((resolve, reject) => {
