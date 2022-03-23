@@ -1,6 +1,6 @@
 import { Buffer } from "buffer";
 import { codeChallenge } from "./authorizeURL";
-const redirectUri = "http://localhost:3000/callback";
+const redirectUri = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
 const endpoint = "api/token";
 const spotifyAccountURL = "https://accounts.spotify.com/";
 const client_secret = "23c81f784ace457dba8887bab41dfc1a";
