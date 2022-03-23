@@ -36,7 +36,7 @@ function Callback() {
     }
   }, []);
 
-  return <></>;
+  return <>Redirecting ...</>;
 }
 
 export default Callback;
