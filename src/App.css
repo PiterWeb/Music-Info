@@ -1,0 +1,26 @@
+main {
+  margin-top:4rem;
+}
+
+button {
+  font-size: calc(10px + 2vmin);
+}
+
+section.description {
+  border: 3px solid #6563ff;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+section.description > p {
+  font-size: calc(10px + 1.25vmin);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
