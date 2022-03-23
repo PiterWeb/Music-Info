@@ -59,7 +59,7 @@ function CustomRoutes() {
       <Route path="/song/">
         <Route path=":id" element={<Song />} />
       </Route>
-      <Route exact path="/callback" element={<Callback />} />
+      <Route path="/callback" element={<Callback />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
