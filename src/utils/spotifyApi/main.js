@@ -81,7 +81,6 @@ class spotifyWebApi {
   }
 
   setAccessToken(accessToken, expiration) {
-    console.log(accessToken);
     setCookie("spotifyAccessToken", accessToken, expiration);
   }
 
@@ -116,7 +115,7 @@ class spotifyWebApi {
 
 const spotifyApi = new spotifyWebApi({
   clientId: import.meta.env.VITE_SPOTIFY_CLIENT_ID,
-  clientSecret: import.meta.env.SPOTIFY_CLIENT_SECRET,
+  clientSecret: import.meta.env.VITE_SPOTIFY_CLIENT_SECRET,
 });
 
 export default spotifyApi;
