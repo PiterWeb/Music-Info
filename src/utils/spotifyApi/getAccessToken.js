@@ -3,8 +3,8 @@ import { codeChallenge } from "./authorizeURL";
 const redirectUri = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
 const endpoint = "api/token";
 const spotifyAccountURL = "https://accounts.spotify.com/";
-const client_secret = "23c81f784ace457dba8887bab41dfc1a";
-const client_id = "2fe1b92d66624962b729862ddc931807";
+const client_secret = import.meta.env.SPOTIFY_CLIENT_SECRET;
+const client_id = import.meta.env.SPOTIFY_CLIENT_ID;
 
 const getAccessToken = (code) =>
   new Promise((resolve, reject) => {

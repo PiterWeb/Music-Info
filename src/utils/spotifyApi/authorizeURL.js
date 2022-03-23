@@ -1,7 +1,7 @@
 const redirectUri = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
 const spotifyAccountURL = "https://accounts.spotify.com/";
 const scope = "user-read-private user-read-email";
-const clientId = "2fe1b92d66624962b729862ddc931807";
+const clientId = import.meta.env.SPOTIFY_CLIENT_ID;
 const codeChallengeMethod = "S256";
 
 function generateRandomString(length) {
