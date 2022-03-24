@@ -74,5 +74,27 @@
     }
 }
 
+#openSpotify {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-left: 0.15rem solid #fff;
+    border-right: 0.15rem solid #fff;
+    border-bottom: 0.15rem solid #fff;
+    
+    transition: 0.3s;
+}
+
+#openSpotify:hover {
+    background-color: #6563ff;
+    color: #fff;
+    border-left: 0.15rem solid #6563ff;
+    border-right: 0.15rem solid #6563ff;
+    border-bottom: 0.15rem solid #6563ff;
+    transition: 0.3s;
+}
+
 
 

@@ -3,6 +3,7 @@ import Logo from "./components/Logo/LogoNormal";
 import SearchIcon from "./images/search.svg";
 import InfoIcon from "./images/comment-alt-exclamation.svg";
 import EnjoyIcon from "./images/heart-sign.svg";
+import SpotifyLogoWhite from "../src/images/spotify-icons-logos/logos/01_RGB/02_PNG/Spotify_Logo_RGB_White.png";
 
 function App() {
   return (
@@ -27,7 +28,10 @@ function App() {
       </section>
 
       <section>
-        <p>This is only available on Spotify for now</p>
+        <p>This is only available for Spotify</p>
+
+        <img src={SpotifyLogoWhite} style={{width: '30vh', height: '100%'}}/>
+
       </section>
     </>
   );

@@ -4,6 +4,7 @@ import { createElement } from "react/cjs/react.development";
 import Player from "../../components/Player/Player";
 import useSong from "../../utils/spotifyApi/useSong";
 import Recomendations from "../../components/Recomendations/Recomendations";
+import SpotifyIconWhite from "../../images/spotify-icons-logos/icons/01_RGB/02_PNG/Spotify_Icon_RGB_White.png";
 import "./Song.css";
 
 function Song() {
@@ -52,6 +53,25 @@ function Song() {
                 id="songImage"
                 alt={song.name}
               />
+              <a
+                href={`https://open.spotify.com/track/${song.id}`}
+                target="_blank"
+                style={{ textDecoration: 'none', color: 'white', fontWeight: 'bold' }}
+              >
+                <div
+
+                  id="openSpotify"
+
+                >
+                  <p>Open on Spotify</p>
+                  <img
+                    src={SpotifyIconWhite}
+                    id="spotifyIcon"
+                    alt="Spotify Icon"
+                    style={{ width: "5vh", height: "100%" }}
+                  />
+                </div>
+              </a>
             </div>
           </article>
 
