@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useRecomendations from "../../utils/spotifyApi/useRecomendations";
+import getRecomendations from "../../utils/spotifyApi/getRecomendations";
 import Card from "../Card/Card";
 import "./Recomendations.css";
 
@@ -10,7 +10,7 @@ function Recomendations({ artists, track }) {
   const genres = undefined;
 
   useEffect(() => {
-    useRecomendations(artists, genres, track).then((data) => {
+    getRecomendations(artists, genres, track).then((data) => {
       var tracks = data.tracks.map((track) => {
         return {
           key: track.id,

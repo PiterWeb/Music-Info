@@ -1,7 +1,6 @@
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import App from "../App";
 import NotFound from "./errors/404";
-import Search from "./Search/Search";
 import Song from "./Song/Song";
 import Callback from "./Callback/Callback";
 import { useRecoilState } from "recoil";
@@ -18,12 +17,12 @@ function CustomRoutes() {
   const [user, setUser] = useRecoilState(userState);
   const [playing, setPlaying] = useRecoilState(playingAudioState);
 
-  const routesWithoutAudio = ["/", "/search", "/callback"];
+  const routesWithoutAudio = ["/", "/callback"];
 
   useEffect(() => {
     if (playing && routesWithoutAudio.includes(location.pathname)) {
       setPlaying(false);
-      navigate(0, { replace: true });
+      navigate(0);
     }
   }, [location]);
 
@@ -55,7 +54,6 @@ function CustomRoutes() {
   return (
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/search" element={<Search />} />
       <Route path="/song/">
         <Route path=":id" element={<Song />} />
       </Route>

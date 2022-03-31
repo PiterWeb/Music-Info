@@ -9,8 +9,21 @@
     }
 
     #songImage {
-        width: 12rem;
-        height: 12rem;
+        width: 15rem;
+        height: 15rem;
+    }
+
+    #openSpotify {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        background-color: #6563ff;
+        border-left: 0.15rem solid #6563ff;
+        border-right: 0.15rem solid #6563ff;
+        border-bottom: 0.15rem solid #6563ff;
+        transition: 0.3s;
     }
 
 }
@@ -29,6 +42,28 @@
         gap: 5rem;
     }
 
+    #openSpotify {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        border-left: 0.15rem solid #fff;
+        border-right: 0.15rem solid #fff;
+        border-bottom: 0.15rem solid #fff;
+        
+        transition: 0.3s;
+    }
+    
+    #openSpotify:hover {
+        background-color: #6563ff;
+        color: #fff;
+        border-left: 0.15rem solid #6563ff;
+        border-right: 0.15rem solid #6563ff;
+        border-bottom: 0.15rem solid #6563ff;
+        transition: 0.3s;
+    }
+
 }
 
 #artists {
@@ -43,7 +78,7 @@
     font-size: 3rem;
     font-weight: bold;
     color: #6563ff;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .songColumn {
@@ -72,28 +107,6 @@
     100% {
         opacity: 1;
     }
-}
-
-#openSpotify {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    border-left: 0.15rem solid #fff;
-    border-right: 0.15rem solid #fff;
-    border-bottom: 0.15rem solid #fff;
-    
-    transition: 0.3s;
-}
-
-#openSpotify:hover {
-    background-color: #6563ff;
-    color: #fff;
-    border-left: 0.15rem solid #6563ff;
-    border-right: 0.15rem solid #6563ff;
-    border-bottom: 0.15rem solid #6563ff;
-    transition: 0.3s;
 }
 
 

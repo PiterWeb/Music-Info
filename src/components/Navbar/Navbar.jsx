@@ -4,33 +4,29 @@ import Logo from "../Logo/LogoSmall";
 import authorizeURL from "../../utils/spotifyApi/authorizeURL";
 import { useRecoilState } from "recoil";
 import userState from "../../atoms/userAtom";
-
-function truncate(str, n) {
-  return str.length > n ? str.substr(0, n - 1) + "..." : str;
-}
+import { useNavigate } from "react-router-dom";
+import SearchBar from "../SearchBar/SearchBar";
 
 function Navbar() {
   const [user, _] = useRecoilState(userState);
 
+  const navigate = useNavigate();
+
   return (
     <nav className="navbar">
-      <div className="navbar-left">
-        <Link to={"/"}>Home</Link>
-        <Link to={"/search"}>Search</Link>
-        {user !== null ? (
-          <a href={authorizeURL} className="navlink">
-            {truncate(user, 12)}
-          </a>
-        ) : (
+        <Logo
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            navigate("/" , { replace: true , search: "" });
+          }}
+        />
+        {user === null ? (
           <a className="navlink" href={authorizeURL}>
             Log In
           </a>
+        ) : (
+          <SearchBar></SearchBar>
         )}
-      </div>
-
-      <div className="navbar-rigth">
-        <Logo />
-      </div>
     </nav>
   );
 }

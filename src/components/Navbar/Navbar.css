@@ -14,20 +14,6 @@
     z-index: 1;
 }
 
-.navbar-left {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.navbar-right {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-}
-
 .navbar:hover {
     height: 100px;
     transition: 0.75s;
@@ -48,5 +34,4 @@
     font-size: 1.1rem;
     margin:0.5rem;
     transition: 0.5s;
-
 }

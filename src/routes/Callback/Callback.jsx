@@ -18,7 +18,6 @@ function Callback() {
     if (code) {
       getAccessToken(code).then(
         ({ access_token, refresh_token, expires_in }) => {
-          console.log("Access token: ", access_token);
           expires_in = expires_in / 86400;
           setCookie("spotifyAccessToken", access_token, expires_in);
           setCookie("spotifyRefreshToken", refresh_token);
@@ -31,7 +30,7 @@ function Callback() {
           });
         }
       ).catch((error) => {
-        console.log(error);
+        console.error(error);
       });
     }
   }, []);

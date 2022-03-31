@@ -19,8 +19,6 @@ const getAccessToken = (code) =>
       body: `grant_type=authorization_code&code=${code}&redirect_uri=${redirectUri}&client_id=${client_id}&code_verifier=${codeChallenge}`,
     })
       .then((response) => {
-        console.log(response);
-        console.log(import.meta.env.VITE_SPOTIFY_CLIENT_SECRET);
         resolve(response.json());
       })
       .catch((error) => reject(error));

@@ -21,19 +21,13 @@ function Player({ url }) {
     const toggle = () => setPlaying(!playing);
 
     useEffect(() => {
+      
       if (sessionStorage.getItem("volume")) {
         setVolume(sessionStorage.getItem("volume"));
       } else {
         setVolumePreview(50);
       }
-    }, [url]);
 
-    audio.onended = () => {
-      setPlaying(false);
-      audio.currentTime = 0;
-    };
-
-    useEffect(() => {
       if (url === null) {
         setPlaying(false);
       } else {
@@ -42,7 +36,13 @@ function Player({ url }) {
         setAudio(new Audio(url));
         setPlaying(false);
       }
+
     }, [url]);
+
+    audio.onended = () => {
+      setPlaying(false);
+      audio.currentTime = 0;
+    };
 
     useEffect(() => {
       playing ? audio.play() : audio.pause();

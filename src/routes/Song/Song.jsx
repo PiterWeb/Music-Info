@@ -1,20 +1,23 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams , useLocation , useNavigate } from "react-router-dom";
 import { createElement } from "react/cjs/react.development";
 import Player from "../../components/Player/Player";
-import useSong from "../../utils/spotifyApi/useSong";
+import getSong from "../../utils/spotifyApi/getSong";
 import Recomendations from "../../components/Recomendations/Recomendations";
 import SpotifyIconWhite from "../../images/spotify-icons-logos/icons/01_RGB/02_PNG/Spotify_Icon_RGB_White.png";
 import "./Song.css";
 
 function Song() {
   const { id } = useParams();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const [song, setSong] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [searchQuery] = useState(location.search);
 
   useEffect(() => {
-    useSong(id).then((data) => {
+    getSong(id).then((data) => {
       var artists = data.artists.map((artist) => {
         return {
           name: artist.name,
@@ -27,6 +30,18 @@ function Song() {
       setIsLoading(false);
     });
   }, [id]);
+
+  useEffect(() => {
+    
+    if (searchQuery !== location.search) {
+
+      navigate("/" , {
+        search: location.search
+      })  
+
+    }
+
+  }, [location.search])
 
   return (
     <section id="songSection">

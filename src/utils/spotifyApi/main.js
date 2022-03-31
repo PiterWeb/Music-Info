@@ -102,7 +102,6 @@ class spotifyWebApi {
       })
         .then((response) => response.json())
         .then((data) => {
-          // console.log(data);
           var { access_token, expires_in } = data;
           expires_in = expires_in / 86400;
           this.setAccessToken(access_token, expires_in);
