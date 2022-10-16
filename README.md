@@ -1,6 +1,6 @@
 # 🎶 Music-Info
 
-**You can self host the web and use your own spotify developer acount**
+👉 **You can self host the web and use your own spotify developer acount** 📙 
 
 ## Purpouse
 
