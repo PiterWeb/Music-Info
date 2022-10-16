@@ -1,6 +1,6 @@
 # 🎶 Music-Info
 
-###  🚧The website is in maintenance because of Spotify Api  🚧
+**You can self host the web and use your own spotify developer acount**
 
 ## Purpouse
 
